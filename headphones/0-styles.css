@@ -1,4 +1,4 @@
-/* Reset (clears browser defaults) */
+/* Reset and basics */
 * {
   margin: 0;
   padding: 0;
@@ -6,111 +6,86 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #fff;
-  color: #111;
+  font-family: "Arial", sans-serif;
+  color: white;
 }
 
-/* Center page content */
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 16px;
-}
-
-/* Header */
-.header-inner {
+/* Header styling */
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 20px 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
 }
 
-.logo {
-  font-weight: bold;
-  font-size: 20px;
+.header .logo img {
+  height: 40px;
 }
 
-/* Navigation links */
-.main-nav ul {
-  list-style: none;
+.nav ul {
   display: flex;
-  gap: 20px;
+  list-style: none;
+  gap: 30px;
+  justify-content:left
 }
 
-.main-nav a {
+.nav a {
   text-decoration: none;
-  color: black;
-  font-weight: 600;
-}
-
-.main-nav a:hover {
-  color: #FF6565;
-}
-
-/* Buttons */
-.btn-primary {
-  background-color: #FF6565;
   color: white;
-  padding: 10px 15px;
-  border-radius: 8px;
-  text-decoration: none;
-}
-
-.btn-primary:hover {
-  opacity: 0.9;
-}
-
-.btn-ghost {
-  border: 1px solid #ccc;
-  padding: 10px 15px;
-  border-radius: 8px;
-  text-decoration: none;
-  color: black;
+  font-weight: 500;
+  margin-left: auto;
 }
 
 /* Hero section */
 .hero {
+  background: url("assets/images/hero-desktop.png") center/cover no-repeat;
+  height: 100vh;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  padding: 60px 16px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-.hero-content {
-  flex: 1;
+  text-align: center;
+  padding: 0 20px;
 }
 
 .hero-content h1 {
-  font-size: 40px;
+  font-size: 2.5rem;
   margin-bottom: 15px;
 }
 
 .hero-content p {
-  color: gray;
-  margin-bottom: 20px;
-  max-width: 500px;
+  font-size: 1.1rem;
+  margin-bottom: 25px;
 }
 
-.hero-image img {
-  max-width: 400px;
+.hero-content button {
+  padding: 12px 30px;
+  background-color: #ff6565;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
 }
 
-/* Responsive for small screens */
-@media (max-width: 480px) {
-  .main-nav {
-    display: none;
+.hero-content button:hover {
+  opacity: 0.9;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .header {
+    padding: 20px;
   }
 
-  .hero {
+  .nav ul {
     flex-direction: column;
-    text-align: center;
+    gap: 15px;
   }
 
-  .hero-image img {
-    width: 80%;
-    margin-bottom: 20px;
+  .hero-content h1 {
+    font-size: 1.8rem;
   }
 }
