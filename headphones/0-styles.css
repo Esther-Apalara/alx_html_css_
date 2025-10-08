@@ -1,0 +1,116 @@
+/* Reset (clears browser defaults) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #111;
+}
+
+/* Center page content */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Header */
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Navigation links */
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+
+.main-nav a:hover {
+  color: #FF6565;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: #FF6565;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-ghost {
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: black;
+}
+
+/* Hero section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 16px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-content h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  color: gray;
+  margin-bottom: 20px;
+  max-width: 500px;
+}
+
+.hero-image img {
+  max-width: 400px;
+}
+
+/* Responsive for small screens */
+@media (max-width: 480px) {
+  .main-nav {
+    display: none;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image img {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}
